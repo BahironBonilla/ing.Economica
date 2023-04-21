@@ -3,8 +3,10 @@ $(document).ready(function(){
 
     $("#menu").hide();
     
-    $("#opcion").click(function(){
+    $("#opcion-1").click(function(){
         $("#menu").show();
+        $("#main").hide();
+
     });
 
 
