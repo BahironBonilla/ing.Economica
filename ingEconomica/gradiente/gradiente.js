@@ -1,19 +1,40 @@
 $(document).ready(function(){
 
 
-    $("#menu").hide();
+    ocultar("#menu");
     
-    $("#opcion-1").click(function(){
-        $("#menu").show();
-        $("#main").hide();
+    $("#opcion-aritmetrica").click(function(){
+        mostrar("#menu");
+        ocultar("#main");
+
+    });
+    $("#opcion-geometrica").click(function(){
+        mostrar("#menu");
+        ocultar("#main");
 
     });
 
     $("#atras-menu").click(function(){
-        $("#menu").hide();
-        $("#main").show();
+        ocultar("#menu")
+        mostrar("#main");
+
 
     });
 
+    $("#salir").click(function(){
+       
+        redireccionar("/ingEconomica/index.html")
+    });
     
   });
+
+  function redireccionar(url) {
+    window.location.href = url;
+
+  }
+  function ocultar(id){
+    $(id).hide();
+  }
+  function mostrar(id){
+    $(id).show();
+  }
