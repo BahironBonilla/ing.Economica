@@ -9,6 +9,11 @@ $(document).ready(function(){
 
     });
 
+    $("#atras-menu").click(function(){
+        $("#menu").hide();
+        $("#main").show();
+
+    });
 
     
   });
