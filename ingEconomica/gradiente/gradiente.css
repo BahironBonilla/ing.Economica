@@ -1,9 +1,9 @@
-.btnAltura{
-    height: 12rem;
-    
+.btnAltura {
+  height: 100px;
 }
 
-.btnSalir{
-    width: 30%;
-    height: 8rem;
+.btnSalir {
+  width: 80px;
+  height: 50px;
+  border-radius: 40%;
 }
