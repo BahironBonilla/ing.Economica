@@ -9,11 +9,38 @@
 <body class="body">
     <h1 class="h1">Interes Simple</h1>
 
-    <div class="container"></div>
-    <div class="botonResultado">
-        <button class="botonResultado">Resultado</button>
+    <div>
+        <p class="h3"> Digita los datos que tengas</p>
     </div>
-    <div class="resultado"></div>
+    <div class="container">
+        <div>
+            <label for="" class="label">Tiempo</label>
+            <input id="tiempo" type="number" min="0" class="texto" placeholder="En meses">
+        </div>
+        <div>
+            <label for="" class="label">Tasa de interes</label>
+            <input id="interes" type="number" min="0" max="100" class="texto" placeholder="0..100">
+        </div>
+        <div>
+            <label for="" class="label">Monto inicial</label>
+            <input id="inicial" type="number" min="0" class="texto" placeholder="Monto inicial">
+        </div>
+        <div>
+            <label for="" class="label">Monto final</label>
+            <input id="final" type="number" min="0" class="texto" placeholder="Monto final">
+        </div>
+
+
+
+    </div>
+    <div style="padding: 5px;"></div>
+    <div class="botonResultado">
+        <button class="botonResultado" onclick="validar()">Resultado</button>
+    </div>
+    <div style="padding: 5px;"></div>
+    <div class="resultado">
+        <p id="p" style="color: white;text-shadow: 2px 1px 4px rgba(0, 0, 0, 0.5);font-size: larger;"></p>
+    </div>
     <script src="interesSimple.js"></script>
 </body>
 
