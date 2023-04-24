@@ -4,9 +4,9 @@ let interes = tasaDeInteres / 100;
 let periodos = 18;
 let gradiente = 10000;
 
-// console.log(
-//   calcularValorPresenteCreciente(anualidadUno, interes, periodos, gradiente)
-// );
+console.log(
+  calcularValorPresenteCreciente(anualidadUno, interes, periodos, gradiente)
+);
 // console.log(
 //   calcularValorPresenteDecreciente(anualidadUno, interes, periodos, gradiente)
 // );
@@ -21,6 +21,43 @@ let gradiente = 10000;
 // calcularValorPresenteInfinitoDecreciente()
 
 // );
+
+
+
+/*
+!Aritmetrica  
+*/
+
+function calcularValorPresenteCreciente(
+  anualidadUno,
+  interes,
+  periodos,
+  gradiente
+) {
+  c =
+    anualidadUno * ((1 - Math.pow(1 + interes, -periodos)) / interes) +
+    (gradiente / interes) *
+      ((1 - Math.pow(1 + interes, -periodos)) / interes -
+        periodos / Math.pow(1 + interes, periodos));
+        console.log(c);
+
+
+
+  return c;
+}
+function calcularValorPresenteDecreciente(
+  anualidadUno,
+  interes,
+  periodos,
+  gradiente
+) {
+  c =
+    anualidadUno * ((1 - Math.pow(1 + interes, -periodos)) / interes) -
+    (gradiente / interes) *
+      ((1 - Math.pow(1 + interes, -periodos)) / interes -
+        periodos / Math.pow(1 + interes, periodos));
+  return c;
+}
 function calcularCuotaCreciente(anualidadUno, gradiente, periodos) {
   rk = anualidadUno + gradiente * (periodos - 1);
   return rk;
@@ -48,29 +85,4 @@ function calcularValorPresenteInfinitoDecreciente(
   return g;
 }
 
-function calcularValorPresenteCreciente(
-  anualidadUno,
-  interes,
-  periodos,
-  gradiente
-) {
-  c =
-    anualidadUno * ((1 - Math.pow(1 + interes, -periodos)) / interes) +
-    (gradiente / interes) *
-      ((1 - Math.pow(1 + interes, -periodos)) / interes -
-        periodos / Math.pow(1 + interes, periodos));
-  return c;
-}
-function calcularValorPresenteDecreciente(
-  anualidadUno,
-  interes,
-  periodos,
-  gradiente
-) {
-  c =
-    anualidadUno * ((1 - Math.pow(1 + interes, -periodos)) / interes) -
-    (gradiente / interes) *
-      ((1 - Math.pow(1 + interes, -periodos)) / interes -
-        periodos / Math.pow(1 + interes, periodos));
-  return c;
-}
+
