@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>Ing. Economica</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="body">
+    <h1 class="h1">Sistema de amortizacion Americano</h1>
+
+    <div>
+        <p class="h3"> Ingrese lo sigientes datos</p>
+    </div>
+    <div class="container">
+        <form class="formulario" id="formularioFrances">
+            <div>
+                <label for="monto" class="label">Monto Total a pagar</label>
+                <input id="monto" name="monto" type="number" min="1" class="texto" placeholder="100000">
+            </div>
+            <div>
+                <label for="tasaInteres" class="label">Tasa de interes</label>
+                <input id="tasaInteres" name="tasaInteres" type="number" min="0" max="100" class="texto" placeholder="0-100">
+            </div>
+            <div>
+                <label for="periodos" class="label">Numero de periodos</label>
+                <input id="periodos" name="periodos" type="number" min="1" class="texto" placeholder="10">
+            </div>
+           
+    
+    
+        </div>
+        <div style="padding: 5px;"></div>
+        <div class="botonResultado">
+            <button class="botonResultado" onclick="validar()">Calcular</button>
+        </div>
+        </form>
+        
+    <div style="padding: 5px;"></div>
+    <div class="resultado">
+        <div class="tabla" >
+            <table id="calculoAmortizacionTable">
+                <tr>
+                    <th>Numero de Cuota</th>
+                    <th>Interes</th>
+                    <th>Cuota a pagar</th>
+                    <th>Capital Residual</th>
+                </tr>
+                <tr>
+                   
+                </tr>
+                <br>
+            </table>
+        </div>
+
+    </div>
+    <script src="sistemaAmericano.js"></script>
+</body>
+
+</html>
