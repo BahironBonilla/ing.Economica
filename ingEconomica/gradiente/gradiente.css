@@ -1,18 +1,21 @@
-
 .btnAltura {
   height: 100px;
+  width: 120px;
 }
 
 .btnSalir {
   width: 80px;
   height: 50px;
-  border-radius: 40%;
+}
+.btnAltura:hover {
+  width: 200px;
+  height: 100px;
+
+  transition: 0.5s;
 }
 
 .abs-center {
   display: flex;
   align-items: center;
   justify-content: center;
-  
 }
-
