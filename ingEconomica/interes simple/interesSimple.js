@@ -6,25 +6,31 @@ let p = document.getElementById("p");
 
 function validar() {
    
-    if (tiempo.value && interes.value && inicial.value && !final.value) {
-        p.innerHTML = "Tiempo(n): "+tiempo.value+" meses | Intereses(i): "+interes.value+"% | Monto inicial(P): $"+inicial.value+"<br><br>"+"El monto final de este problema es: $"+calcularValorFuturo(inicial.value, interes.value, tiempo.value);
-    }
-    if (tiempo.value && interes.value && !inicial.value && final.value) {
-        p.innerHTML = "Tiempo(n): "+tiempo.value+" meses | Intereses(i): "+interes.value+"% | Monto final(F): $"+final.value+"<br><br>"+"El monto inicial de este problema es: $"+calcularValorPresente(final.value, interes.value, tiempo.value);
-    }
-    if (tiempo.value && !interes.value && inicial.value && final.value) {
-        p.innerHTML = "Tiempo(n): "+tiempo.value+" meses | Monto inicial(P): $"+inicial.value+" | Monto final(F): $"+final.value+"<br><br>"+"El interes de este problema es: "+calcularInteres(final.value, inicial.value, tiempo.value)*100+"%";
-    }
-    if (!tiempo.value && interes.value && inicial.value && final.value) {
-        p.innerHTML = " Intereses(i): "+interes.value+"% | Monto inicial(P): $"+inicial.value+" | Monto final(F): $"+final.value+"<br><br>"+"El tiempo requerido es: "+calcularTiempo(final.value, inicial.value, interes.value)+" meses";
-    }
-    if (tiempo.value && interes.value && inicial.value && final.value) {
-        p.innerHTML = "Tiempo(n): "+tiempo.value+" meses | Intereses(i): "+interes.value+"% | Monto inicial(P): $"+inicial.value+"Monto final(F): $"+final.value+"<br><br>No necesitas calcular nada";
-    }
+
+
+        if (tiempo.value && interes.value && inicial.value && !final.value) {
+            p.innerHTML = "Tiempo(n): "+tiempo.value+" meses | Intereses(i): "+interes.value+"% | Monto inicial(P): $"+inicial.value+"<br><br>"+"El monto final de este problema es: $"+calcularValorFuturo(inicial.value, interes.value, tiempo.value);
+        }
+        if (tiempo.value && interes.value && !inicial.value && final.value) {
+            p.innerHTML = "Tiempo(n): "+tiempo.value+" meses | Intereses(i): "+interes.value+"% | Monto final(F): $"+final.value+"<br><br>"+"El monto inicial de este problema es: $"+calcularValorPresente(final.value, interes.value, tiempo.value);
+        }
+        if (tiempo.value && !interes.value && inicial.value && final.value) {
+            p.innerHTML = "Tiempo(n): "+tiempo.value+" meses | Monto inicial(P): $"+inicial.value+" | Monto final(F): $"+final.value+"<br><br>"+"El interes de este problema es: "+calcularInteres(final.value, inicial.value, tiempo.value)*100+"%";
+        }
+        if (!tiempo.value && interes.value && inicial.value && final.value) {
+            p.innerHTML = " Intereses(i): "+interes.value+"% | Monto inicial(P): $"+inicial.value+" | Monto final(F): $"+final.value+"<br><br>"+"El tiempo requerido es: "+calcularTiempo(final.value, inicial.value, interes.value)+" meses";
+        }
+        if (tiempo.value && interes.value && inicial.value && final.value) {
+            p.innerHTML = "Tiempo(n): "+tiempo.value+" meses | Intereses(i): "+interes.value+"% | Monto inicial(P): $"+inicial.value+"Monto final(F): $"+final.value+"<br><br>No necesitas calcular nada";
+        }
+
+
     document.getElementById("tiempo").value = null;
     document.getElementById("interes").value = null;
     document.getElementById("inicial").value = null;
     document.getElementById("final").value = null;
+
+
 }
 function calcularValorFuturo(inicial, interes, tiempo) {
     return inicial * (1 + (interes/100) * tiempo);

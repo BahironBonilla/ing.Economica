@@ -32,16 +32,21 @@
     flex-wrap: wrap;
     justify-content: center;
     box-shadow: 20px 20px 4px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    
 
 }
+
 .label {
     color: white;
     display: flex;
-  
+    
+    display: inline-block;
+  text-align: left;
 }
 .texto {
     height: 30px;
-    width: 150px;
+    width: 100%;
     display: flex;
     
     color: white;
