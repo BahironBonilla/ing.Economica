@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+	<h1>Interes Compuesto</h1>
+	<div id="formularioInformacion">
+		<form>
+			<div>
+				<label>Preriodos de pago</label>
+				<input type="number" name="periodos" min="0" placeholder="0..100">
+				<label>Valor presente</label>
+				<input type="number" name="presente" min="0" placeholder="0..100">
+			</div>
+			<div>
+				<label>Tasa de interes</label>
+				<input type="number" name="tasa" min="0" max="100" placeholder="0..100">
+				<label>Valor futuro</label>
+				<input type="number" name="futuro" min="0" placeholder="0..100">
+			</div>
+			<div id="valores">
+				<div>
+					<label>Ingresos</label>
+					<input type="number" name="ingreso1" min="0" placeholder="Monto">
+					<input type="number" name="tiempo1" min="0" placeholder="mes">
+					<!--<button>+</button>-->
+				</div>
+				<div>
+					<label>Egresos</label>
+					<input type="number" name="egreso1" min="0" placeholder="Monto">
+					<input type="number" name="tiempo1" min="0" placeholder="mes">
+					<!--<button>+</button>-->
+				</div>
+			</div>
+			<p id="resultado">Resultados</p>
+		</form>
+	</div>
+	<script src="script.js"></script>	
+</body>
+</html>

@@ -1,0 +1,83 @@
+* {
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+	background-color: #5682c4;
+	color: white;
+	text-align: center;
+	/*background-color: rgba(86, 130, 195, 1);*/
+}
+
+h1{
+	padding-bottom: 5px;
+    text-shadow: 5px 5px 4px rgba(0, 0, 0, 0.5);
+}
+
+#formularioInformacion {
+	/*background-color: #a4b6d0;*/
+	background-color: rgba(137, 145, 222, 0.53);
+	color: white;
+	padding: 30px;
+	border-radius: 20px;
+	box-shadow: 20px 20px 4px rgba(0, 0, 0, 0.5);
+	display: flex;
+	justify-content: space-around;
+	gap: 15px;
+}
+
+#formularioInformacion div{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 10px;
+}
+
+#formularioInformacion form div select, #formularioInformacion form div input{
+	border: none;
+	border-radius: 3px;
+	color: white;
+    background-color: transparent;
+    border-radius: 20px;
+    border: solid 2px;
+    border-color: white;
+    outline: none;
+    text-align: center;
+    margin-left: 10px;
+}
+
+
+
+#formularioInformacion div select option {
+    background-color:  #a4b6d0;
+}
+
+#formularioInformacion #valores{
+	display: flex;
+}
+
+#resultado {
+	width: 200px;
+	font-size: larger;
+	background-color: #5660bd;
+	color: white;
+	border: none;
+	border-radius: 30px;
+	padding: 10px
+	font-size: larger;
+    text-align: center;
+    margin: auto;
+    align-items: center;
+    text-shadow: 5px 5px 4px rgba(0, 0, 0, 0.5);
+    border-radius: 35px;
+    border-color: transparent;
+    box-shadow: 1px 2px 1px rgba(0, 0, 0, 0.5);
+
+}
+
+#resultados:hover {
+    background-color: rgb(146, 153, 214);
+    width: 250px;
+    transition: 0.5s;
+}
