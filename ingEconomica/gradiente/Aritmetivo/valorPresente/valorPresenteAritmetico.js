@@ -59,24 +59,40 @@ function validar() {
 function calcularValorPresenteCreciente(inicial, interes, tiempo, gradiente) {
 interes = interes/100
 console.log(interes);
-  let c =
-    inicial * ((1 - Math.pow(1 + interes, -tiempo)) / interes) +
-    (gradiente / interes) *
-      ((1 - Math.pow(1 + interes, -tiempo)) / interes -
-        tiempo / Math.pow(1 + interes, tiempo));
+
+let primeraParte = tiempo / Math.pow(1 + interes, tiempo)
+let segundaParte = (1 - Math.pow(1 + interes, -tiempo)) / interes
+let terceraParte =(gradiente / interes)
+let cuartaParte = ((1 - Math.pow(1 + interes, -tiempo)) / interes)
+let quintaParte = (segundaParte -  primeraParte);
+let sestaParte = terceraParte * quintaParte
+let septimaParte = inicial * cuartaParte
+ let c =
+ septimaParte + sestaParte
+    
+      
   console.log(c);
 
   return c.toFixed(2);
 }
 function calcularValorPresenteDecreciente(inicial, interes, tiempo, gradiente) {
   interes = interes/100
-console.log(interes);
-
-  c =
-    inicial * ((1 - Math.pow(1 + interes, -tiempo)) / interes) -
-    (gradiente / interes) *
-      ((1 - Math.pow(1 + interes, -tiempo)) / interes -
-        tiempo / Math.pow(1 + interes, tiempo));
-  console.log(c);
-  return c.toFixed(2);
+  console.log(interes);
+  
+  let primeraParte = tiempo / Math.pow(1 + interes, tiempo)
+  let segundaParte = (1 - Math.pow(1 + interes, -tiempo)) / interes
+  let terceraParte =(gradiente / interes)
+  let cuartaParte = ((1 - Math.pow(1 + interes, -tiempo)) / interes)
+  let quintaParte = (segundaParte -  primeraParte);
+  let sestaParte = terceraParte * quintaParte
+  let septimaParte = inicial * cuartaParte
+   let c =
+   septimaParte - sestaParte
+      
+   console.log(septimaParte);
+   console.log(sestaParte);
+        
+    console.log(c);
+  
+    return c.toFixed(2);
 }

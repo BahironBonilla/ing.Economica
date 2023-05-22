@@ -79,8 +79,6 @@ function calcularValorFuturoDecreciente(inicial, interes, tiempo, gradiente) {
   console.log(primeraParte);
   console.log(segundaParte);
   console.log(terceraParte);
-  let valorFuturo = inicial * primeraParte - segundaParte * terceraParte;
+  let valorFuturo = (inicial * primeraParte) - (segundaParte * terceraParte);
   return valorFuturo.toFixed(2);
 }
-
-
