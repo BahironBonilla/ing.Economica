@@ -50,7 +50,7 @@
           </div>
           <div class="row abs-center p-3">
             
-              <button class="btn btn-danger btnAltura"style={width:200px} id="salir">
+              <button class="btn w-25 btn-danger btnSalir"style={width:200px} id="salir">
                 <p class="h3">Salir  <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="25"
@@ -88,8 +88,8 @@
               </button>
             </div>
             <div class="col p-3">
-              <button class="btn btn-primary w-75 btnAltura">
-                <p class="h2">opcion 2</p>
+              <button class="btn btn-primary w-75 btnAltura" id="opcionValorFuturoAritmetico">
+                <p class="h2">Valor Futuro</p>
               </button>
             </div>
           </div>
@@ -122,7 +122,7 @@
     </div>
 
     
-    <!-- Valor presente Aritmetico creciente -->
+    <!--! Valor presente Aritmetico creciente -->
 
     <div class="text-center m-5" id="valorPresenteAritmeticoCreciente">
       <div class="row">
@@ -187,12 +187,12 @@
                 </div>
                 <div class="col-12 abs-center">
                   <div class=" col-6">
-                    <button class="btn w-100 btn-primary btnAltura" id="calcularValorPresente">
+                    <button class="btn w-50 btn-primary btnAltura" id="calcularValorPresente">
                       <p class="h2">Calcular</p>
                     </button>
                   </div>
                   <div class="col-2 align-content-end p-1">
-                    <button class="btn btn-danger btnAltura w-100" id="atrasValorPresenteAritmetico">
+                    <button class="btn btn-danger btnAltura w-75" id="atrasValorPresenteAritmetico">
                       <p class="h3">Atras</p>
                     </button>
                   </div>
@@ -207,6 +207,89 @@
       </div>
     </div>
     
+        
+    <!--! Valor Futuro Aritmetico creciente -->
+
+    <div class="text-center m-5" id="valorFuturoAritmeticoCreciente">
+      <div class="row">
+        <h2>Valor Futuro Aritmetico</h2>
+      </div>
+     
+      <div class="row">
+        <div class="card m-2 p-2">
+          <div class="row">
+            
+            <div class="abs-center">
+              <form>
+                <div class="row p-2 abs-center">
+                  
+                  <div class=" col-4">
+                    <label for="interes2" class="form-label">Tasa de interes</label>
+                    <input type="number" class="form-control" id="interes2" aria-describedby="interesAyuda2" min="1" required>
+                    <div id="interesAyuda2" class="form-text">Escriba el valor del interes</div>
+                  </div>
+                  <div class=" col-4">
+                    <label for="numeroFlujos2" class="form-label">Numero de flujos</label>
+                    <input type="number" class="form-control" id="numeroFlujos2" aria-describedby="numeroFlujosAyuda2" min="1" required>
+                    <div id="numeroFlujosAyuda2" class="form-text">Escriba el numero de anualidades.</div>
+                  </div>
+                  <div class=" col-4">
+                    <label for="gradiente2" class="form-label">Valor Presente</label> 
+                    <input type="number" class="form-control" id="gradiente2" aria-describedby="gradienteAyuda2" min="1" required>
+                    <div id="gradienteAyuda2" class="form-text">Escriba el valor de la presente</div>
+                  </div>
+                  <div class="col-4 abs-center" >
+                    <div class="row">
+                      <label for="" class="form-label">Tipo de gradiente</label>
+                      <div class="form-check col-6">
+                        <input value="creciente" class="form-check-input" type="radio" name="tipoGradiente" id="tipoGradiente11"checked required>
+                        <label class="form-check-label" for="tipoGradiente11">
+                          Creciente
+                        </label>
+                      </div>
+                      <div class="form-check col-6">
+                        <input value="decreciente" class="form-check-input" type="radio" name="tipoGradiente" id="tipoGradiente22" required>
+                        <label class="form-check-label" for="tipoGradiente22">
+                          Decreciente
+                        </label>
+                      </div>
+                    </div>
+                    <div class="">
+                      
+                      
+                  </div>
+                </div>
+
+                <div class="row p-2 abs-center">
+                  <div class=" col-6">
+                    <label for="valorFuturoAritmeticoCreciente" class="form-label">Valor Futuro</label>
+                    <input type="text" class="form-control" style="text-align:right;" id="valorFuturoAritmeticoCreciente" readonly>
+                  </div>
+                  
+                </div>
+                <div class="col-12 abs-center">
+                  <div class=" col-6">
+                    <button class="btn w-50 btn-primary btnAltura" id="calcularValorFuturo">
+                      <p class="h2">Calcular</p>
+                    </button>
+                  </div>
+                  <div class="col-2 align-content-end p-1">
+                    <button class="btn btn-danger btnAltura w-75" id="atrasValorFuturoAritmetico">
+                      <p class="h3">Atras</p>
+                    </button>
+                  </div>
+                  
+                </div>
+                
+              </form>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+
 
     <!--Geometrico  -->
 

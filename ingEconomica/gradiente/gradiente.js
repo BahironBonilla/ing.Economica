@@ -2,7 +2,8 @@ $(document).ready(function () {
   ocultar("#menuAritmetico");
   ocultar("#menuGeometrico");
   ocultar("#valorPresenteAritmeticoCreciente");
-
+  // ocultar("#valorFuturoAritmeticoCreciente");
+  
   $("#opcion-aritmetrica").click(function () {
     mostrar("#menuAritmetico");
     ocultar("#main");
@@ -17,10 +18,20 @@ $(document).ready(function () {
     mostrar("#valorPresenteAritmeticoCreciente");
   });
 
+  $("#opcionValorFuturoAritmetico").click(function () {
+    ocultar("#menuAritmetico");
+    mostrar("#valorFuturoAritmeticoCreciente");
+  });
+  
   $("#atrasValorPresenteAritmetico").click(function () {
     event.preventDefault();
     mostrar("#menuAritmetico");
     ocultar("#valorPresenteAritmeticoCreciente");
+  });
+  $("#atrasValorFuturoAritmetico").click(function () {
+    event.preventDefault();
+    mostrar("#menuAritmetico");
+    ocultar("#valorFuturoAritmeticoCreciente");
   });
   $("#atras-menuAritmetico").click(function () {
     ocultar("#menuAritmetico");
