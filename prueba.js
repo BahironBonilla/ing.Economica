@@ -1,33 +1,30 @@
-function calcularValorFuturoCreciente(inicial, interes, tiempo,gradiente) {
+function calcularAnualidadCreciente(valor, interes, tiempo, gradiente) {
+  interes = interes / 100
+  console.log( interes,"interes");
+  valor = parseInt(valor)
+  console.log(valor,"valor");
+  console.log(tiempo,"tiempo");
+  console.log(gradiente,"gradiente");
+  let potencia = Math.pow(1 + interes, -tiempo)
+  console.log(potencia,"potencias");
+  let potencia2 = Math.pow(1 + interes, tiempo)
+  console.log(potencia);
+  console.log(potencia2);
+  let primeraParte  = (1-potencia)/interes
+  let segundaParte = primeraParte - (tiempo/potencia2)
+  let terceraParte = primeraParte
+  let cuartaParte = (gradiente/interes)*segundaParte
+  let quintaParte = valor - cuartaParte
+  let sestaParte = quintaParte / terceraParte
 
-    let primeraParte = ((Math.pow(1+(interes/100),tiempo)-1)/(interes/100))
-    let segundaParte = (gradiente/(interes/100))
-    let terceraParte =((Math.pow(1+(interes/100),tiempo)-1)/(interes/100))-tiempo
-   
-    console.log(primeraParte);
-    console.log(segundaParte);
-    console.log(terceraParte);
-    let valorFuturo = (inicial*primeraParte)+(segundaParte*terceraParte)
-    return valorFuturo
+  console.log(potencia,"potencia");
+  console.log(cuartaParte,"cuarta parte g/i  * resto");
+  console.log(primeraParte,"primera ");
+  console.log(segundaParte,"segunda ");
+  anualidad = sestaParte
+  
+
+  return anualidad.toFixed(2);
 }
 
-function calcularValorFuturoDecreciente(inicial, interes, tiempo,gradiente) {
-
-    let primeraParte = ((Math.pow(1+(interes/100),tiempo)-1)/(interes/100))
-    let segundaParte = (gradiente/(interes/100))
-    let terceraParte =((Math.pow(1+(interes/100),tiempo)-1)/(interes/100))-tiempo
-   
-    console.log(primeraParte);
-    console.log(segundaParte);
-    console.log(terceraParte);
-    let valorFuturo = (inicial*primeraParte)-(segundaParte*terceraParte)
-    return valorFuturo.toFixed(2)
-  }
-let inicial = 450
-let interes = 2.8
-console.log(interes);
-let tiempo = 4
-let gradiente = 25
-
-let resultado = calcularValorFuturoDecreciente(inicial,interes,tiempo,gradiente)
-console.log(resultado);
+console.log(calcularAnualidadCreciente(40000000,7.3,5,225000))
