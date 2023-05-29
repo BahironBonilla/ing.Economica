@@ -6,6 +6,9 @@ let gradiente = document.getElementById("gradiente");
 let p = document.getElementById("p");
 let tipo = document.getElementById("tipoGradiente1").value;
 let tipo2 = document.getElementById("tipoGradiente2").value;
+
+
+
 function validar() {
   let opcion = $("input:radio[name=tipoGradiente]:checked").val();
   console.log(opcion);
