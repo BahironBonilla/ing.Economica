@@ -2,7 +2,7 @@
 console.log("inicio");
 function validar() {
   let periodos = document.getElementById("tiempo");
-  let tasa =parseFloat( document.getElementById("interes")).value;
+  let tasa =document.getElementById("interes");
   let futuro = document.getElementById("final");
   let presente = document.getElementById("inicial");
   let p = document.getElementById("p");
@@ -10,7 +10,7 @@ function validar() {
   console.log("Tasa",tasa);
   console.log("Presente",presente.value);
   console.log("Futuro",futuro.value);
-  if (periodos.value && tasa.value && presente.value && !isNaN( futuro.value) ){
+  if (periodos.value && tasa.value && presente.value && !futuro.value ){
     console.log("valor futuro");
     p.innerHTML =
       "Tiempo(n): " +
@@ -80,20 +80,28 @@ function validar() {
   document.getElementById("final").value = null;
 }
 function calcularValorFuturo(presente, tasa, periodos) {
+  tasa = tasa / 100;
+
   valorFuturo = presente * Math.pow(1 + tasa, periodos);
   console.log(valorFuturo);
   return valorFuturo;
 }
 function calcularValorPresente(futuro, tasa, periodos) {
-  valorPresente = futuro / Math.pow(1 + tasa, periodos);
-  return valorPresente;
-}
-function calcularInteres(futuro, presente, tasa) {
-  tasaI = Math.pow(futuro / presente, 1 / periodos);
+  tasa = tasa / 100;
 
-  return tasaI;
+  valorPresente = futuro / Math.pow(1 + tasa, periodos);
+  return Math.round(valorPresente);
+}
+function calcularInteres(futuro, presente, periodos) {
+  tasaI = Math.pow(futuro / presente, 1 / periodos);
+  console.log(tasaI);
+  tasaI = (tasaI - 1);
+  return tasaI.toFixed(2);
+  
 }
 function calcularTiempo(futuro, presente, tasa) {
+  tasa = tasa / 100;
+
   tiempo = Math.log(futuro / presente) / Math.log(1 + tasa);
-  return tiempo;
+  return Math.round(tiempo);
 }
