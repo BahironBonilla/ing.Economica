@@ -90,16 +90,18 @@ function calcularValorPresente(futuro, tasa, periodos) {
   tasa = tasa / 100;
 
   valorPresente = futuro / Math.pow(1 + tasa, periodos);
-  return valorPresente;
+  return Math.round(valorPresente);
 }
 function calcularInteres(futuro, presente, periodos) {
   tasaI = Math.pow(futuro / presente, 1 / periodos);
-
-  return tasaI;
+  console.log(tasaI);
+  tasaI = (tasaI - 1);
+  return tasaI.toFixed(2);
+  
 }
 function calcularTiempo(futuro, presente, tasa) {
   tasa = tasa / 100;
 
   tiempo = Math.log(futuro / presente) / Math.log(1 + tasa);
-  return tiempo;
+  return Math.round(tiempo);
 }
