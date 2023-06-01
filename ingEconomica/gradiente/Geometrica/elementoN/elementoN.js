@@ -71,13 +71,13 @@ function validacion() {
 }
 
 function calcularElementoNCreciente(inicial, tiempo, gradiente) {
-  inicial = parseInt(inicial)
+  gradiente = gradiente / 100
   valorElementoN = inicial *(Math.pow((1+gradiente),(tiempo-1)))
 
   return valorElementoN;
 }
 function calcularElementoNDecreciente(inicial, tiempo, gradiente) {
-  inicial = parseInt(inicial)
+  gradiente = gradiente / 100
 
   vlorElementoN = inicial *(Math.pow((1+(-gradiente)),(tiempo-1)))
 
