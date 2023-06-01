@@ -2,8 +2,27 @@ let interes = document.getElementById("interes");
 let inicial = document.getElementById("inicial");
 let gradiente = document.getElementById("gradiente");
 let p = document.getElementById("p");
+function validar(){
+  
+    if(interes.value == ""){
+      window.alert("Porfavor digite la tasa de interes...")
+    }else{
+      if(inicial.value == ""){
+        
+        window.alert("Porfavor digite el valor inicial...")
+      }else{
+        if(gradiente.value==""){
+          window.alert("Porfavor digite la gradiente...")
 
-function validar() {
+        }else{
+          validacion()
+
+        }
+      }
+    }
+  }
+
+function validacion() {
  
   p.innerHTML =
     "Intereses(i): " +

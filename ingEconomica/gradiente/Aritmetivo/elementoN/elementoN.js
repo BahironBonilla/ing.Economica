@@ -4,7 +4,25 @@ let gradiente = document.getElementById("gradiente");
 let p = document.getElementById("p");
 let tipo = document.getElementById("tipoGradiente1").value;
 let tipo2 = document.getElementById("tipoGradiente2").value;
+
 function validar() {
+  console.log(tiempo.value);
+  if (tiempo.value == "") {
+    window.alert("Porfavor digite el numero de cuotas...");
+  } else {
+    if (inicial.value == "") {
+      window.alert("Porfavor digite el valor inicial...");
+    } else {
+      if (gradiente.value == "") {
+        window.alert("Porfavor digite la gradiente...");
+      } else {
+        validacion();
+      }
+    }
+  }
+}
+
+function validacion() {
   let opcion = $("input:radio[name=tipoGradiente]:checked").val();
   console.log(opcion);
 
@@ -48,13 +66,13 @@ function validar() {
 }
 
 function calcularElementoNCreciente(inicial, tiempo, gradiente) {
-  inicial = parseInt(inicial)
+  inicial = parseInt(inicial);
   valorElementoN = inicial + (tiempo - 1) * gradiente;
 
   return valorElementoN;
 }
 function calcularElementoNDecreciente(inicial, tiempo, gradiente) {
-  inicial = parseInt(inicial)
+  inicial = parseInt(inicial);
 
   valorElementoN = inicial + (tiempo - 1) * -gradiente;
 

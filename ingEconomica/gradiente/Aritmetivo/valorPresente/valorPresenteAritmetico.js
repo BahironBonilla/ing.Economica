@@ -6,7 +6,31 @@ let gradiente = document.getElementById("gradiente");
 let p = document.getElementById("p");
 let tipo = document.getElementById("tipoGradiente1").value;
 let tipo2 = document.getElementById("tipoGradiente2").value;
-function validar() {
+function validar(){
+  console.log(tiempo.value);
+  if(tiempo.value == ""){
+    window.alert("Porfavor digite el tiempo...")
+  }else{
+    if(interes.value == ""){
+      window.alert("Porfavor digite la tasa de interes...")
+      
+    }else{
+      if(inicial.value == ""){
+        
+        window.alert("Porfavor digite el valor inicial...")
+      }else{
+        if(gradiente.value==""){
+          window.alert("Porfavor digite la gradiente...")
+
+        }else{
+          validacion()
+
+        }
+      }
+    }
+  }
+}
+function validacion() {
   let opcion = $("input:radio[name=tipoGradiente]:checked").val();
   console.log(opcion);
 

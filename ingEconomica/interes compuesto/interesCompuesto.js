@@ -2,13 +2,12 @@
 console.log("inicio");
 function validar() {
   let periodos = document.getElementById("tiempo");
-  let tasa =parseFloat( document.getElementById("interes"));
-  tasa = tasa / 100;
+  let tasa =parseFloat( document.getElementById("interes")).value;
   let futuro = document.getElementById("final");
   let presente = document.getElementById("inicial");
   let p = document.getElementById("p");
   console.log("Periodos",periodos.value);
-  console.log("Tasa",tasa.value);
+  console.log("Tasa",tasa);
   console.log("Presente",presente.value);
   console.log("Futuro",futuro.value);
   if (periodos.value && tasa.value && presente.value && !isNaN( futuro.value) ){
